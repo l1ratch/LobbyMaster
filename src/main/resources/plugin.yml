@@ -1,0 +1,44 @@
+name: LobbyMaster
+version: '${project.version}'
+main: ru.l1ratch.lobbymaster.LobbyMaster
+api-version: '1.13'
+author: l1ratch
+load: STARTUP
+
+commands:
+  lm:
+    description: Основная команда LobbyMaster с подкомандой setspawn
+    permission: lm.admin
+  gmc:
+    description: Переключение в режим креатива
+    permission: lm.spcmd
+  gms:
+    description: Переключение в режим выживания
+    permission: lm.spcmd
+  gma:
+    description: Переключение в режим приключения
+    permission: lm.spcmd
+  gmsp:
+    description: Переключение в режим наблюдателя
+    permission: lm.spcmd
+  fly:
+    description: Включение/выключение полета
+    permission: lm.spcmd
+
+permissions:
+  lm.admin:
+    description: Полный доступ к командам /lm
+    default: op
+  lm.spcmd:
+    description: Доступ к специальным командам (/gmc, /gms, /gma, /gmsp, /fly)
+    default: false
+  lm.chat.bypass:
+    default: false
+  lm.command.bypass:
+    default: false
+  lm.ignore-damage:
+    default: false
+  lm.ignore-feed:
+    default: false
+  lm.ignore-block:
+    default: false

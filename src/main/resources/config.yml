@@ -1,0 +1,64 @@
+effects:
+  enabled: true
+  list:
+    - SPEED:2:10m
+    - JUMP:1:5m
+
+chat:
+  enabled: true # Переключатель функции блокировки чата
+
+command-blocker:
+  mode: black # Возможные значения: black, white, off
+  commands:
+    - "msg"
+    - "home"
+    - "spawn"
+
+player:
+  block-break-disabled: true  # Запрет ломания блоков
+  block-place-disabled: true  # Запрет установки блоков
+  damage-disabled: true  # Запрет урона
+  hunger-disabled: true  # Запрет голода
+  explosion-disabled: true  # Запрет взрывов
+  fire-spread-disabled: true  # Запрет распространения огня и сгорания блоков
+  ice-melt-disabled: true  # Запрет таяния льда
+  block-physics-disabled: true  # Запрет физики блоков
+  gamemode: SURVIVAL  # Принудительная смена игрового режима
+
+notifications:
+  join-message: 'Ура, &e{player} присоединился к игре!' # Сообщение при входе игрока.
+  quit-message: '&e{player} покинул игру!' # Сообщение при выходе игрока.
+  death-message: '&c{player} умер!' # Сообщение при смерти игрока.
+  # Если null, сообщение скрыто. Если off, используется стандартное.
+
+  welcome-message:
+    enabled: true # Включить приветственные сообщения
+    messages:
+      - '&aДобро пожаловать, {player}!'
+      - '&aМы рады тебя видеть на нашем сервере!'
+
+  spam-message:
+    enabled: true # Включить спам-оповещения
+    interval: 1200 # Интервал в тиках (1200 = 1 минута)
+    messages:
+      - '&eПривет, игроки! Это автоматическое сообщение!'
+      - '&eНе забудьте ознакомиться с правилами сервера!'
+
+world:
+  name: world  # Имя мира для настройки времени и погоды
+  freeze-time: 6000  # Заморозка времени на позиции (0 = рассвет, 6000 = полдень, -1 = выключено)
+  freeze-weather: CLEAR  # Заморозка погоды (CLEAR, RAIN, THUNDER), null = выключена
+
+spawn:
+  enabled: false # Включение/выключение возврата на спавн при входе
+  return-on-fall: false  # Включение/выключение возврата на спавн при падении в пустоту
+  location:
+    world: world
+    x: 0
+    y: 64
+    z: 0
+    yaw: 0
+    pitch: 0
+
+
+
