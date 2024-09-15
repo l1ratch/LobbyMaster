@@ -44,12 +44,10 @@ public class EffectManager implements Listener {
                     String durationString = parts[2];
 
                     int duration;
-                    if (durationString.endsWith("m")) {
-                        duration = Integer.parseInt(durationString.replace("m", "")) * 60 * 20;
-                    } else if (durationString.equals("0")) {
+                    if (durationString.equals("0")) {
                         duration = Integer.MAX_VALUE; // Вечный эффект
                     } else {
-                        duration = Integer.parseInt(durationString) * 20;
+                        duration = Integer.parseInt(durationString) * 20; // Время в секундах, переводим в тики
                     }
 
                     if (effectType != null) {
