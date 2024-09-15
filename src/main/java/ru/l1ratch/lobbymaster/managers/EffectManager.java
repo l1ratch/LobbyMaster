@@ -13,7 +13,7 @@ import java.util.List;
 
 public class EffectManager implements Listener {
 
-    private LobbyMaster plugin;
+    private final LobbyMaster plugin; // Объявлено как final
 
     public EffectManager(LobbyMaster plugin) {
         this.plugin = plugin;
